@@ -1,0 +1,65 @@
+html {
+	overflow: hidden;
+  }
+  
+  
+  .Opponent {
+	  animation: rotation 3s infinite linear;
+	  -webkit-animation: rotation 3s infinite linear;
+  }
+  
+  .paused .Opponent {
+	  animation: none;
+	  -webkit-animation: none;
+  }
+  
+  /* Para navegadores que necesitan prefijo -webkit- */
+  @-webkit-keyframes rotation {
+	  from {
+		-webkit-transform: rotate(0deg);
+	  }
+	  to {
+		-webkit-transform: rotate(359deg);
+	  }
+	}
+	
+	/* Versión estándar para navegadores modernos */
+	@keyframes rotation {
+	  from {
+		transform: rotate(0deg);
+	  }
+	  to {
+		transform: rotate(359deg);
+	  }
+	}
+	
+  
+  .gamebutton {
+	  border: none;
+	  background: #ddd;
+	  color: #333;
+	  padding: 10px 20px;
+	  outline: none;
+	  font-family: monospace;
+	  cursor: pointer;
+  }
+  
+  .Boss {
+	  animation: rotation 5s infinite linear;
+	  -webkit-animation: rotation 5s infinite linear;
+  }
+  #boss-announcement {
+	  position: fixed;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+	  font-size: 48px;
+	  font-weight: bold;
+	  color: red;
+	  background-color: black;
+	  padding: 20px;
+	  border: 5px solid yellow;
+	  z-index: 100;
+	  text-align: center;
+	}
+  
